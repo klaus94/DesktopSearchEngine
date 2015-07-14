@@ -32,6 +32,6 @@ public class Resource
 
     public ResourceType getType()
     {
-        return path;
+        return rt;
     }
 }

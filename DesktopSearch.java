@@ -22,7 +22,6 @@ public class DesktopSearch
             throw new IllegalArgumentException();
         }
 
-        // check if extension is already in the map ???
         types.put(extension, type);
     }
 
@@ -37,8 +36,9 @@ public class DesktopSearch
             throw new IllegalArgumentException();
         }
 
-        // check if extension is valid key ???
+        
         return types.remove(extension);             // Map returns the removed object
+        
     }
 
     public void registerResource(Resource res)
@@ -53,7 +53,7 @@ public class DesktopSearch
 
     public List<Resource> processRequest(String request)
     {
-        //...
+        return index.getResources(request);
     }
 
 }
