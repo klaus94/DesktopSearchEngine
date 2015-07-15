@@ -52,7 +52,7 @@ public class Index
         }
         else
         {
-            return null;
+            return new ArrayList<Resource>();
         }
 
     }

@@ -25,7 +25,21 @@ public class DesktopSearch
         types.put(extension, type);
     }
 
-    public ResourceType unregisterType(String extension)
+    public ResourceType getType(String extension)
+    {
+        if (extension == null)
+        {
+            return null;
+        }
+        if (extension.equals(""))
+        {
+            throw new IllegalArgumentException();
+        }
+
+        return types.get(extension);
+    }
+
+    public void unregisterType(String extension)
     {
         if (extension == null)
         {
@@ -37,7 +51,7 @@ public class DesktopSearch
         }
 
         
-        return types.remove(extension);             // Map returns the removed object
+        types.remove(extension);
         
     }
 
